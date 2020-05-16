@@ -44,7 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data.Content\File.cs" />
+    <Compile Include="Data.Content\Folder.cs" />
+    <Compile Include="Data.Content\IContent.cs" />
     <Compile Include="Data.Content\Project.cs" />
+    <Compile Include="Data.Pictures\IPictured.cs" />
+    <Compile Include="Data.Pictures\Picture.cs" />
+    <Compile Include="Data.Pictures\Thumbnail.cs" />
+    <Compile Include="Data.Tags\ITagged.cs" />
+    <Compile Include="Data.Tags\Tag.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
