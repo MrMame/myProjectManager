@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Tags
+namespace myProjectManager.Data.Access.XML
 {
-    class Tag
+    class XMLReader
     {
     }
 }

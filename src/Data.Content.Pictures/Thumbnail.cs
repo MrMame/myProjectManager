@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Pictures
+namespace myProjectManager.Data.Content.Pictures
 {
     class Thumbnail
     {

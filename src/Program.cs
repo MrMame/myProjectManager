@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+using myProjectManager.UI.Testing;
+using myProjectManager.UI.MainForms;
+
 namespace myProjectManager
 {
     static class Program
@@ -15,7 +18,13 @@ namespace myProjectManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Start the Windows
+            // -------------------------
+            // Main Application Window. If Application is in Testmode, comment this out
+            // Application.Run(new Form1());
+            // ACtivate this to run the TestingForm first 
+            Application.Run(new FormTesting());
         }
     }
 }

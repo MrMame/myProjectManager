@@ -1,4 +1,4 @@
-﻿namespace myProjectManager
+﻿namespace myProjectManager.UI.MainForms
 {
     partial class Form1
     {
