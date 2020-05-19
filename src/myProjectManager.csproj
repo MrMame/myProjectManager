@@ -44,34 +44,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.Access\AccessController.cs" />
-    <Compile Include="Data.Access.Database\DBReader.cs" />
-    <Compile Include="Data.Access.Database\DBWriter.cs" />
-    <Compile Include="Data.Access.Filesystem\FSReader.cs" />
-    <Compile Include="Data.Access.Filesystem\FSWriter.cs" />
-    <Compile Include="Data.Access\IReader.cs" />
-    <Compile Include="Data.Access\IWriter.cs" />
-    <Compile Include="Data.Access.XML\XMLReader.cs" />
-    <Compile Include="Data.Access.XML\XMLWriter.cs" />
-    <Compile Include="Data.Content\File.cs" />
-    <Compile Include="Data.Content\Folder.cs" />
-    <Compile Include="Data.Content\IContent.cs" />
-    <Compile Include="Data.Content\Project.cs" />
-    <Compile Include="Data.Content.Pictures\IPictured.cs" />
-    <Compile Include="Data.Content.Pictures\Picture.cs" />
-    <Compile Include="Data.Content.Pictures\Thumbnail.cs" />
-    <Compile Include="Data.Content.Tags\ITagged.cs" />
-    <Compile Include="Data.Content.Tags\Tag.cs" />
-    <Compile Include="UI.MainForms\Form1.cs">
+    <Compile Include="Model.Access\AccessController.cs" />
+    <Compile Include="Model.Access.Database\DBReader.cs" />
+    <Compile Include="Model.Access.Database\DBWriter.cs" />
+    <Compile Include="Model.Access.Filesystem\FSReader.cs" />
+    <Compile Include="Model.Access.Filesystem\FSWriter.cs" />
+    <Compile Include="Model.Access\IReader.cs" />
+    <Compile Include="Model.Access\IWriter.cs" />
+    <Compile Include="Model.Access.XML\XMLReader.cs" />
+    <Compile Include="Model.Access.XML\XMLWriter.cs" />
+    <Compile Include="Model.Content\File.cs" />
+    <Compile Include="Model.Content\Folder.cs" />
+    <Compile Include="Model.Content\IContent.cs" />
+    <Compile Include="Model.Content\Project.cs" />
+    <Compile Include="Model.Content.Pictures\IPictured.cs" />
+    <Compile Include="Model.Content.Pictures\Picture.cs" />
+    <Compile Include="Model.Content.Pictures\Thumbnail.cs" />
+    <Compile Include="Model.Content.Tags\ITagged.cs" />
+    <Compile Include="Model.Content.Tags\Tag.cs" />
+    <Compile Include="Views.MainForms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI.MainForms\Form1.Designer.cs">
+    <Compile Include="Views.MainForms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI.Testing\FormTesting.cs">
+    <Compile Include="Views.Testing\FormTesting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI.Testing\FormTesting.Designer.cs">
+    <Compile Include="Views.Testing\FormTesting.Designer.cs">
       <DependentUpon>FormTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

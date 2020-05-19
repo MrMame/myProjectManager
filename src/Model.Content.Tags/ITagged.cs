@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Access.XML
+namespace myProjectManager.Model.Content
 {
-    class XMLReader
+    interface ITagged
     {
     }
 }

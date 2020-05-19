@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Content.Tags
+namespace myProjectManager.Model.Content
 {
-    interface ITagged
+    interface IPictured
     {
     }
 }

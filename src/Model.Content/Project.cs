@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Access.Filesystem
+namespace myProjectManager.Model.Content
 {
-    class FSReader
+    class Project
     {
     }
 }

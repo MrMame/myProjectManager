@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace myProjectManager.UI.Testing
+namespace myProjectManager.Views
 {
-    public partial class FormTesting : Form
+    public partial class Form1 : Form
     {
-        public FormTesting()
+        public Form1()
         {
             InitializeComponent();
         }

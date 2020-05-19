@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Content.Pictures
+namespace myProjectManager.Model.Access
 {
-    interface IPictured
+    class XMLWriter
     {
     }
 }

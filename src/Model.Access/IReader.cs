@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Data.Access.Database
+namespace myProjectManager.Model.Access
 {
-    class DBReader
+    interface IReader
     {
     }
 }

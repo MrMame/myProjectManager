@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-using myProjectManager.UI.Testing;
-using myProjectManager.UI.MainForms;
+using myProjectManager.Views;
 
 namespace myProjectManager
 {
