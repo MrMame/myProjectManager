@@ -1,4 +1,4 @@
-﻿namespace myProjectManager
+﻿namespace myProjectManager.Views
 {
     partial class Form1
     {
