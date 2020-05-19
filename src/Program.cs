@@ -18,12 +18,8 @@ namespace myProjectManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Start the Windows
-            // -------------------------
-            // Main Application Window. If Application is in Testmode, comment this out
-            // Application.Run(new Form1());
-            // ACtivate this to run the TestingForm first 
-            Application.Run(new FormTesting());
+            Application.Run(new Form1());
+            
         }
     }
 }

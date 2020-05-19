@@ -54,8 +54,8 @@
     <Compile Include="Model.Access\XMLReader.cs" />
     <Compile Include="Model.Access\XMLWriter.cs" />
     <Compile Include="Model.Content\File.cs" />
-    <Compile Include="Model.Content\Folder.cs" />
     <Compile Include="Model.Content\IContent.cs" />
+    <Compile Include="Model.Content\IFolder.cs" />
     <Compile Include="Model.Content\Project.cs" />
     <Compile Include="Model.Content\IPictured.cs" />
     <Compile Include="Model.Content\Picture.cs" />

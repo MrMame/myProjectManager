@@ -7,5 +7,6 @@ namespace myProjectManager.Model.Content
 {
     interface IPictured
     {
+
     }
 }

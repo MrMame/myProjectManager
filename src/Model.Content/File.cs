@@ -5,7 +5,7 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    class File
+    class ProjectFile
     {
     }
 }
