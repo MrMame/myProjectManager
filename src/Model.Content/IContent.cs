@@ -7,5 +7,9 @@ namespace myProjectManager.Model.Content
 {
     interface IContent
     {
+
+
+
+
     }
 }

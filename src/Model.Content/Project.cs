@@ -5,7 +5,9 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    class Project
+    public class Project:IContent,IPictured,ITagged
     {
+
+
     }
 }
