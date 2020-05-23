@@ -5,7 +5,8 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    class ProjectFile
+    public interface IContentFolder
     {
+        List<IContent> Contents { get; set; } 
     }
 }

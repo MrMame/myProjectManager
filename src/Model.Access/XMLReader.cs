@@ -5,7 +5,7 @@ using System.Text;
 
 namespace myProjectManager.Model.Access
 {
-    class XMLReader
+    class XMLReader : IReader
     {
     }
 }

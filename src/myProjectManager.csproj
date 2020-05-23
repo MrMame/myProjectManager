@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AccessController.cs" />
+    <Compile Include="Controller\LoadStoreController.cs" />
     <Compile Include="Model.Access\DBReader.cs" />
     <Compile Include="Model.Access\DBWriter.cs" />
     <Compile Include="Model.Access\FSReader.cs" />
@@ -53,14 +54,18 @@
     <Compile Include="Model.Access\IWriter.cs" />
     <Compile Include="Model.Access\XMLReader.cs" />
     <Compile Include="Model.Access\XMLWriter.cs" />
-    <Compile Include="Model.Content\ProjectFile.cs" />
+    <Compile Include="Model.Content\IContentFolder.cs" />
+    <Compile Include="Model.Content\IProject.cs" />
+    <Compile Include="Model.Content\IProjectFolder.cs" />
     <Compile Include="Model.Content\IContent.cs" />
-    <Compile Include="Model.Content\IFolder.cs" />
+    <Compile Include="Model.Content\Project.cs" />
     <Compile Include="Model.Content\ProjectFolder.cs" />
     <Compile Include="Model.Content\IPictured.cs" />
     <Compile Include="Model.Content\Picture.cs" />
     <Compile Include="Model.Content\PictureThumbnail.cs" />
     <Compile Include="Model.Content\ITagged.cs" />
+    <Compile Include="Model.Content\SubFile.cs" />
+    <Compile Include="Model.Content\SubFolder.cs" />
     <Compile Include="Model.Content\Tag.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>

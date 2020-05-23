@@ -5,7 +5,7 @@ using System.Text;
 
 namespace myProjectManager.Model.Access
 {
-    class DBReader
+    class DBReader:IReader
     {
     }
 }

@@ -10,7 +10,7 @@ namespace myProjectManager.Model.Content
     {
         string DisplayName { get; set; }
         string Description { get; set; }
-        List<IContent> Contents { get; set; }
+        IContentFolder ParentFolder { get; set; }
 
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Model.Access
+namespace myProjectManager.Model.Content
 {
-    class XMLWriter : IWriter
+    public class SubFile:IContent
     {
     }
 }
