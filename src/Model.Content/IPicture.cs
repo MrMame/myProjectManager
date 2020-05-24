@@ -5,8 +5,8 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    interface IPictured
+    public interface IPicture
     {
-
+        string PictureFilename { get; set; }
     }
 }

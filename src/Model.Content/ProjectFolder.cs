@@ -12,6 +12,7 @@ namespace myProjectManager.Model.Content
         #region "IProjectFolder"
         public string ProjectFolderName { get; set; }
         public IProject ParentProject { get; set; }
+        public IPicture Symbol { get; set; }
         #endregion
 
         #region "IContentFolder"
@@ -46,6 +47,7 @@ namespace myProjectManager.Model.Content
 
             this.ProjectFolderName = "";
             this.ParentProject = null;
+            this.Symbol = null;
 
             this.Contents = new List<IContent>();
 
@@ -57,6 +59,7 @@ namespace myProjectManager.Model.Content
         {
             this.ProjectFolderName = Name;
             this.ParentProject = ParentProject;
+            this.Symbol = null;
 
             this.Contents = new List<IContent>();
 
@@ -68,6 +71,7 @@ namespace myProjectManager.Model.Content
         {
             this.ProjectFolderName = Name;
             this.ParentProject = ParentProject;
+            this.Symbol = null;
 
             this.Contents = new List<IContent>();
 

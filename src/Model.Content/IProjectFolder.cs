@@ -9,5 +9,6 @@ namespace myProjectManager.Model.Content
     {
         string ProjectFolderName { get; set; }
         IProject ParentProject { get; set; }
+        IPicture Symbol { get; set; }
     }
 }
