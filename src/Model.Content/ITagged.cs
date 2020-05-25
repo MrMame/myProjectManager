@@ -5,7 +5,8 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    interface ITagged
+    public interface ITagged
     {
+        List<Tag> Tags { get; set; }
     }
 }

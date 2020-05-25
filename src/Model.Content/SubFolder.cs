@@ -5,7 +5,7 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    public class SubFolder : IContentFolder, IContent
+    public class SubFolder : IContentFolder, IContent, ITagged
     {
         #region "IContentFolder"
             public List<IContent> Contents { get; set; }
@@ -18,9 +18,12 @@ namespace myProjectManager.Model.Content
             public IContentFolder ParentFolder { get; set; }
         #endregion
 
+        #region "ITagged"
+            public List<Tag> Tags { get; set; }
+        #endregion
 
         #region "FactoryMethods"
-            public static SubFolder GetSubFolder() { return new SubFolder(); }
+        public static SubFolder GetSubFolder() { return new SubFolder(); }
             public static SubFolder GetSubFolder(string DisplayName, string Description, IContentFolder ParentFolder)
             {
                 return new SubFolder(DisplayName, Description, ParentFolder);
@@ -34,6 +37,7 @@ namespace myProjectManager.Model.Content
             this.Description = "";
             this.ParentFolder = null;
             this.Contents = new List<IContent>();
+            this.Tags = new List<Tag>();
             }
             private SubFolder(string DisplayName, string Description, IContentFolder ParentFolder)
             {
@@ -41,6 +45,7 @@ namespace myProjectManager.Model.Content
                 this.Description = Description;
                 this.ParentFolder = ParentFolder;
                 this.Contents = new List<IContent>();
+                this.Tags = new List<Tag>();
             }
         #endregion
 

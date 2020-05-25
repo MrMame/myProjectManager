@@ -6,7 +6,7 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    public class ProjectFolder : IProjectFolder, IContentFolder, IContent
+    public class ProjectFolder : IProjectFolder, IContentFolder, IContent, ITagged
     {
         
         #region "IProjectFolder"
@@ -23,6 +23,9 @@ namespace myProjectManager.Model.Content
         public string DisplayName { get; set; }
         public string Description { get; set; }
         public IContentFolder ParentFolder { get; set; }
+        #endregion
+        #region "ITagged"
+        public List<Tag> Tags { get; set; }
         #endregion
 
 
@@ -54,10 +57,12 @@ namespace myProjectManager.Model.Content
             this.DisplayName = "";
             this.Description = "";
             this.ParentFolder = null;
+
+            this.Tags = new List<Tag>();
         }
-        private ProjectFolder(string Name, IProject ParentProject)
+        private ProjectFolder(string ProjectFolderName, IProject ParentProject)
         {
-            this.ProjectFolderName = Name;
+            this.ProjectFolderName = ProjectFolderName;
             this.ParentProject = ParentProject;
             this.Symbol = null;
 
@@ -66,10 +71,12 @@ namespace myProjectManager.Model.Content
             this.DisplayName = "";
             this.Description = "";
             this.ParentFolder = null;
+
+            this.Tags = new List<Tag>();
         }
-        private ProjectFolder(string Name, IProject ParentProject, string DisplayName, string Description, IContentFolder ParentFolder)
+        private ProjectFolder(string ProjectFolderName, IProject ParentProject, string DisplayName, string Description, IContentFolder ParentFolder)
         {
-            this.ProjectFolderName = Name;
+            this.ProjectFolderName = ProjectFolderName;
             this.ParentProject = ParentProject;
             this.Symbol = null;
 
@@ -78,6 +85,8 @@ namespace myProjectManager.Model.Content
             this.DisplayName = DisplayName;
             this.Description = Description;
             this.ParentFolder = ParentFolder;
+
+            this.Tags = new List<Tag>();
         }
         #endregion
     }

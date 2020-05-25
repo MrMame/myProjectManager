@@ -42,16 +42,35 @@ namespace Model.Content
             Assert.AreEqual((ProjectFolder)theProject.Contents[1], BillsFolder, "BILL ProjectFolder is not inside the List");
 
         }
-
+        [Test]
         public void AddPictureToProject()
+        {
+            string Filename = "c:\\temp.jpg";
+            Picture theSymbol = Picture.GetPicture(Filename);
+
+            string ProjectName = "The Project Name";
+            Project theProject = Project.GetProject(ProjectName);
+            theProject.Symbol = theSymbol;
+
+
+            Assert.AreEqual(Filename, theProject.Symbol.PictureFilename, "Filename for Symbol is not the right one.");
+        }
+        [Test]
+        public void AddTagsToProject()
         {
             string ProjectName = "The Project Name";
             Project theProject = Project.GetProject(ProjectName);
 
-            string Filename = "c:\\temp.jpg";
-            Picture theSymbol = Picture.GetPicture(Filename);
+            string TagStringImportant = "Important";
+            Tag theTag = Tag.GetTag(TagStringImportant);
+            string TagStringNew = "New";
+            Tag theNewTag = Tag.GetTag(TagStringNew);
 
-            Assert.AreEqual(Filename, theProject.Symbol.PictureFilename, "Filename for Symbol is not the right one.");
+            theProject.Tags.Add(theTag);
+            theProject.Tags.Add(theNewTag);
+
+            Assert.AreEqual(TagStringImportant, ((Tag)theProject.Tags[0]).TagString, "Tag is not the same.");
+            Assert.AreEqual(TagStringNew, ((Tag)theProject.Tags[1]).TagString, "Tag is not the same.");
         }
 
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace myProjectManager.Model.Content
 {
-    public class Project : IProject, IContentFolder
+    public class Project : IProject, IContentFolder, ITagged
     {
         #region "IProject"
         public string ProjectName { get; set; }
@@ -15,6 +15,13 @@ namespace myProjectManager.Model.Content
         #region "IContentFolder"
         public List<IContent> Contents { get; set; }
         #endregion
+
+        #region "ITagged"
+        public List<Tag> Tags { get; set; }
+        #endregion
+
+
+
 
         #region "FactoryMethods"
         public static Project GetProject() { return new Project(); }
@@ -27,11 +34,13 @@ namespace myProjectManager.Model.Content
         {
             this.ProjectName = "";
             this.Contents = new List<IContent>();
+            this.Tags = new List<Tag>();
         }
         private Project(string ProjectName)
         {
             this.ProjectName = ProjectName;
             this.Contents = new List<IContent>();
+            this.Tags = new List<Tag>();
         }
         #endregion
 

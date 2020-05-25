@@ -30,7 +30,23 @@ namespace Model.Content
             Assert.AreEqual(Description, theSubfile.Description, "Description is not the same");
             Assert.AreEqual(ParentFolder, (ProjectFolder)theSubfile.ParentFolder, "ParentFolder is not the same");
         }
+        [Test]
+        public void AddTagsTo()
+        {
 
+            SubFile theSubFile = SubFile.GetSubFile();
+
+            string TagStringImportant = "Important";
+            Tag theTag = Tag.GetTag(TagStringImportant);
+            string TagStringNew = "New";
+            Tag theNewTag = Tag.GetTag(TagStringNew);
+
+            theSubFile.Tags.Add(theTag);
+            theSubFile.Tags.Add(theNewTag);
+
+            Assert.AreEqual(TagStringImportant, ((Tag)theSubFile.Tags[0]).TagString, "Tag is not the same.");
+            Assert.AreEqual(TagStringNew, ((Tag)theSubFile.Tags[1]).TagString, "Tag is not the same.");
+        }
 
 
     }
