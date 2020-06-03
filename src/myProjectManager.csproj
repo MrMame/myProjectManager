@@ -57,10 +57,8 @@
     <Compile Include="Model.Content\IContentFolder.cs" />
     <Compile Include="Model.Content\IPicture.cs" />
     <Compile Include="Model.Content\IProject.cs" />
-    <Compile Include="Model.Content\IProjectFolder.cs" />
     <Compile Include="Model.Content\IContent.cs" />
     <Compile Include="Model.Content\Project.cs" />
-    <Compile Include="Model.Content\ProjectFolder.cs" />
     <Compile Include="Model.Content\Picture.cs" />
     <Compile Include="Model.Content\PictureThumbnail.cs" />
     <Compile Include="Model.Content\ITagged.cs" />

@@ -22,13 +22,13 @@ namespace Model.Content
         {
             string DisplayName = "The Subfile";
             string Description = "The Description";
-            ProjectFolder ParentFolder = ProjectFolder.GetProjectFolder();
+            SubFolder ParentFolder = SubFolder.GetSubFolder();
 
             SubFile theSubfile = SubFile.GetSubFile(DisplayName,Description,ParentFolder);
 
             Assert.AreEqual(DisplayName,theSubfile.DisplayName, "Displayname is not the same");
             Assert.AreEqual(Description, theSubfile.Description, "Description is not the same");
-            Assert.AreEqual(ParentFolder, (ProjectFolder)theSubfile.ParentFolder, "ParentFolder is not the same");
+            Assert.AreEqual(ParentFolder, (SubFolder)theSubfile.ParentFolder, "ParentFolder is not the same");
         }
         [Test]
         public void AddTagsTo()

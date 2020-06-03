@@ -14,7 +14,7 @@ namespace myProjectManager.Model.Content
         #endregion
 
         #region "FactoryMethods"
-        public static SubFile GetSubFile() { return new SubFile(); }
+            public static SubFile GetSubFile() { return new SubFile(); }
             public static SubFile GetSubFile(string DisplayName, string Description, IContentFolder ParentFolder)
             {
                 return new SubFile(DisplayName, Description, ParentFolder);
@@ -22,10 +22,8 @@ namespace myProjectManager.Model.Content
         #endregion
 
         #region "ITagged"
-        public List<Tag> Tags { get; set; }
+            public List<Tag> Tags { get; set; }
         #endregion
-
-
 
         #region "PrivateConstructors"
         private SubFile()
@@ -43,7 +41,5 @@ namespace myProjectManager.Model.Content
                 this.Tags = new List<Tag>();
             }
         #endregion
-
-
     }
 }

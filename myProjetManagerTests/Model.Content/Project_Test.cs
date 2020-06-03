@@ -32,14 +32,14 @@ namespace Model.Content
             string ProjectName = "The Project Name";
             Project theProject = Project.GetProject(ProjectName);
 
-            ProjectFolder EmailFolder = ProjectFolder.GetProjectFolder("EMAILS", theProject);
-            ProjectFolder BillsFolder = ProjectFolder.GetProjectFolder("BILLS", theProject);
+            SubFolder EmailFolder = SubFolder.GetSubFolder("EMAILS", "All Project EMAILS",theProject);
+            SubFolder BillsFolder = SubFolder.GetSubFolder("Bills", "All Project Bills", theProject);
 
             theProject.Contents.Add(EmailFolder);
             theProject.Contents.Add(BillsFolder);
 
-            Assert.AreEqual((ProjectFolder)theProject.Contents[0],EmailFolder,"EMAIL ProjectFolder is not inside the List");
-            Assert.AreEqual((ProjectFolder)theProject.Contents[1], BillsFolder, "BILL ProjectFolder is not inside the List");
+            Assert.AreEqual((SubFolder)theProject.Contents[0],EmailFolder,"EMAIL Folder is not inside the List");
+            Assert.AreEqual((SubFolder)theProject.Contents[1], BillsFolder, "BILL Folder is not inside the List");
 
         }
         [Test]
