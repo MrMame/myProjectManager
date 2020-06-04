@@ -1,19 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Model.Content
+namespace myProjectManager.Model
 {
     public class Project : IProject, IContentFolder, ITagged
     {
+        List<IContent> _Contents;
+
+
         #region "IProject"
         public string ProjectName { get; set; }
-        public IPicture Symbol { get; set; }
+            public IPicture Symbol { get; set; }
         #endregion
 
         #region "IContentFolder"
-        public List<IContent> Contents { get; set; }
+        public ReadOnlyCollection<IContent> ReadOnlyContentsList => this._Contents.AsReadOnly();
+        public void AddContent(IContent item){
+            this._Contents.Add(item);
+            item.ParentFolder = this;
+        }
+
+        public void RemoveContent(IContent item){
+            this._Contents.Remove(item);
+        }
         #endregion
 
         #region "ITagged"
@@ -33,13 +45,13 @@ namespace myProjectManager.Model.Content
         private Project()
         {
             this.ProjectName = "";
-            this.Contents = new List<IContent>();
+            this._Contents = new List<IContent>();
             this.Tags = new List<Tag>();
         }
         private Project(string ProjectName)
         {
             this.ProjectName = ProjectName;
-            this.Contents = new List<IContent>();
+            this._Contents = new List<IContent>();
             this.Tags = new List<Tag>();
         }
         #endregion

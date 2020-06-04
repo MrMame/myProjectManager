@@ -1,7 +1,5 @@
 ﻿using NUnit.Framework;
-using myProjectManager.Model.Content;
-
-
+using myProjectManager.Model;
 
 namespace Model.Content
 {
@@ -32,14 +30,14 @@ namespace Model.Content
             string ProjectName = "The Project Name";
             Project theProject = Project.GetProject(ProjectName);
 
-            SubFolder EmailFolder = SubFolder.GetSubFolder("EMAILS", "All Project EMAILS",theProject);
-            SubFolder BillsFolder = SubFolder.GetSubFolder("Bills", "All Project Bills", theProject);
+            SubFolder EmailFolder = SubFolder.GetSubFolder("EMAILS", "All Project EMAILS");
+            SubFolder BillsFolder = SubFolder.GetSubFolder("Bills", "All Project Bills");
 
-            theProject.Contents.Add(EmailFolder);
-            theProject.Contents.Add(BillsFolder);
+            theProject.AddContent(EmailFolder);
+            theProject.AddContent(BillsFolder);
 
-            Assert.AreEqual((SubFolder)theProject.Contents[0],EmailFolder,"EMAIL Folder is not inside the List");
-            Assert.AreEqual((SubFolder)theProject.Contents[1], BillsFolder, "BILL Folder is not inside the List");
+            Assert.AreEqual((SubFolder)theProject.ReadOnlyContentsList[0],EmailFolder,"EMAIL Folder is not inside the List");
+            Assert.AreEqual((SubFolder)theProject.ReadOnlyContentsList[1], BillsFolder, "BILL Folder is not inside the List");
 
         }
         [Test]

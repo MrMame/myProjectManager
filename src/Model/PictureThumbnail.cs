@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Model.Access
+namespace myProjectManager.Model
 {
-    class XMLWriter : IWriter
+    class PictureThumbnail
     {
     }
 }

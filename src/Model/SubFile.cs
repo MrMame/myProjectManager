@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Model.Content
+namespace myProjectManager.Model
 {
     public class SubFile : IContent, ITagged
     {
@@ -15,9 +15,9 @@ namespace myProjectManager.Model.Content
 
         #region "FactoryMethods"
             public static SubFile GetSubFile() { return new SubFile(); }
-            public static SubFile GetSubFile(string DisplayName, string Description, IContentFolder ParentFolder)
+            public static SubFile GetSubFile(string DisplayName, string Description)
             {
-                return new SubFile(DisplayName, Description, ParentFolder);
+                return new SubFile(DisplayName, Description);
             }
         #endregion
 
@@ -33,11 +33,11 @@ namespace myProjectManager.Model.Content
                 this.ParentFolder = null;
                 this.Tags = new List<Tag>();    
             }
-            private SubFile(string DisplayName, string Description, IContentFolder ParentFolder)
+            private SubFile(string DisplayName, string Description)
             {
                 this.DisplayName = DisplayName;
                 this.Description = Description;
-                this.ParentFolder = ParentFolder;
+                this.ParentFolder = null;
                 this.Tags = new List<Tag>();
             }
         #endregion

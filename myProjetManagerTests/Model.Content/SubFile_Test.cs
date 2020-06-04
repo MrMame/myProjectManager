@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
-using myProjectManager.Model.Content;
+
+using myProjectManager.Model;
 
 namespace Model.Content
 {
@@ -24,7 +25,8 @@ namespace Model.Content
             string Description = "The Description";
             SubFolder ParentFolder = SubFolder.GetSubFolder();
 
-            SubFile theSubfile = SubFile.GetSubFile(DisplayName,Description,ParentFolder);
+            SubFile theSubfile = SubFile.GetSubFile(DisplayName,Description);
+            ParentFolder.AddContent(theSubfile);
 
             Assert.AreEqual(DisplayName,theSubfile.DisplayName, "Displayname is not the same");
             Assert.AreEqual(Description, theSubfile.Description, "Description is not the same");

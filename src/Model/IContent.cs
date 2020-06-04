@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace myProjectManager.Model.Content
+namespace myProjectManager.Model
 {
     public interface IContent
     {

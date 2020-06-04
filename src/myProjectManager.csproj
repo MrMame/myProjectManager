@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>myProjectManager.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,33 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\AccessController.cs" />
-    <Compile Include="Controller\LoadStoreController.cs" />
-    <Compile Include="Model.Access\DBReader.cs" />
-    <Compile Include="Model.Access\DBWriter.cs" />
-    <Compile Include="Model.Access\FSReader.cs" />
-    <Compile Include="Model.Access\FSWriter.cs" />
-    <Compile Include="Model.Access\IReader.cs" />
-    <Compile Include="Model.Access\IWriter.cs" />
-    <Compile Include="Model.Access\XMLReader.cs" />
-    <Compile Include="Model.Access\XMLWriter.cs" />
-    <Compile Include="Model.Content\IContentFolder.cs" />
-    <Compile Include="Model.Content\IPicture.cs" />
-    <Compile Include="Model.Content\IProject.cs" />
-    <Compile Include="Model.Content\IContent.cs" />
-    <Compile Include="Model.Content\Project.cs" />
-    <Compile Include="Model.Content\Picture.cs" />
-    <Compile Include="Model.Content\PictureThumbnail.cs" />
-    <Compile Include="Model.Content\ITagged.cs" />
-    <Compile Include="Model.Content\SubFile.cs" />
-    <Compile Include="Model.Content\SubFolder.cs" />
-    <Compile Include="Model.Content\Tag.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Controller.Access\DBReader.cs" />
+    <Compile Include="Controller.Access\DBWriter.cs" />
+    <Compile Include="Controller.Access\FSReader.cs" />
+    <Compile Include="Controller.Access\FSWriter.cs" />
+    <Compile Include="Controller.Access\IReader.cs" />
+    <Compile Include="Controller.Access\IWriter.cs" />
+    <Compile Include="Controller.Access\XMLReader.cs" />
+    <Compile Include="Controller.Access\XMLWriter.cs" />
+    <Compile Include="Controller\ContentController.cs" />
+    <Compile Include="Model\ProjectsModel.cs" />
+    <Compile Include="Views\IContentView.cs" />
+    <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\IContentFolder.cs" />
+    <Compile Include="Model\IPicture.cs" />
+    <Compile Include="Model\IProject.cs" />
+    <Compile Include="Model\IContent.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\Picture.cs" />
+    <Compile Include="Model\PictureThumbnail.cs" />
+    <Compile Include="Model\ITagged.cs" />
+    <Compile Include="Model\SubFile.cs" />
+    <Compile Include="Model\SubFolder.cs" />
+    <Compile Include="Model\Tag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
